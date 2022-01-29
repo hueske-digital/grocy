@@ -14,10 +14,8 @@ services:
       default:
       proxy_apps:
 
-
 volumes:
   grocy_conf:
-
 
 networks:
   proxy_apps:
