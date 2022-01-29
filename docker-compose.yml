@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+  app:
+    image: lscr.io/linuxserver/grocy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ
+    volumes:
+      - grocy_conf:/config
+    restart: unless-stopped
+    networks:
+      default:
+      proxy_apps:
+
+
+volumes:
+  grocy_conf:
+
+
+networks:
+  proxy_apps:
+    name: proxy_apps
+    external: true
+
