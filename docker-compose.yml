@@ -1,4 +1,4 @@
-version: "3.5"
+version: "3.8"
 
 services:
   app:
@@ -7,6 +7,16 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ
+      - GROCY_CURRENCY
+      - GROCY_FEATURE_FLAG_STOCK
+      - GROCY_FEATURE_FLAG_SHOPPINGLIST
+      - GROCY_FEATURE_FLAG_RECIPES
+      - GROCY_FEATURE_FLAG_CHORES
+      - GROCY_FEATURE_FLAG_TASKS
+      - GROCY_FEATURE_FLAG_BATTERIES
+      - GROCY_FEATURE_FLAG_EQUIPMENT
+      - GROCY_FEATURE_FLAG_CALENDAR
+      - GROCY_FEATURE_FLAG_LABEL_PRINTER
     volumes:
       - grocy_conf:/config
     restart: unless-stopped
